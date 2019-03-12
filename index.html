@@ -26,11 +26,12 @@
         <div class="row">
             <div class="col">
                 <div class="jumbotron">
-                    <h1 class="title">Train Scheduler Assistant</h1>
-                    <p class="lead">Your personal train scheduler assistant, at your service!</p>
+                    <h1 class="title">Train Schedule Assistant</h1>
+                    <p class="lead">Train schedules at your fingertips!</p>
                 </div>
             </div>
         </div>
+        <h2>Current Train Schedule</h2>
         <div class="row">
             <div class="col">
                 <table class="table">
@@ -45,21 +46,14 @@
                     </thead>
                     <tbody>
                         <!-- The body of the table will be created via JS -->
-                        <!-- Keeping the structure below for reference. -->
-                        <!-- <tr>
-                            <th scope="row">1</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr> -->
                     </tbody>
                 </table>
             </div>
         </div>
         <div class="row">
             <div class="col">
+                <hr>
+                <h2>Add Train</h2>
                 <form>
                     <div class="form-group">
                         <label for="trainName">Train Name</label>
@@ -74,7 +68,7 @@
                         <input type="trainTime" class="form-control" id="timeInput" placeholder="ex: 18:30">
                         <small id="timeHelp" class="form-text text-muted">Format: HH:mm -- military time</small>
                     </div>
-                    <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+                    <button type="submit" class="btn btn-primary" id="submitButton">Add Train</button>
                 </form>
             </div>
         </div>
