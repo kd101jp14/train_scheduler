@@ -89,5 +89,17 @@ $(document).ready(function () {
         console.log(tFrequency);
         console.log(nextTrain);
         console.log(minutesAway);
+
+        // Create the new row
+        var newRow = $("<tr>").append(
+            $("<td>").text(tName),
+            $("<td>").text(tDestination),
+            $("<td>").text(tFrequency),
+            $("<td>").text(nextTrain),
+            $("<td>").text(minutesAway)
+        );
+
+        // Append the new row to the table
+        $(".table > tbody").append(newRow);
     });
 });
