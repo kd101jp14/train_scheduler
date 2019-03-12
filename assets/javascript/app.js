@@ -95,7 +95,11 @@ $(document).ready(function () {
             $("<td>").text(minutesAway)
         );
 
+        // Make list more visible.
+        $("#tableBody").css({"font-size": "130%"});
+        $("#tableBody").css({"font-weight": "bold"});
+
         // Append the new row to the table
-        $(".table > tbody").append(newRow);
+        $(".table > tbody").prepend(newRow);
     });
 });
