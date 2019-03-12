@@ -22,7 +22,7 @@ $(document).ready(function () {
         var tName = $("#nameInput").val().trim();
         var tDestination = $("#destInput").val().trim();
         var tTime = $("#timeInput").val().trim();
-        var tFrequency = 10;
+        var tFrequency = $("#frequencyInput").val().trim();
         var nextTrain = "";
         var tMinutesTillTrain = 0;
 
@@ -37,10 +37,6 @@ $(document).ready(function () {
         // Difference between time of first train and current time
         var diffTime = moment().diff(moment(tTimeConverted), "minutes");
         console.log("DIFFERENCE IN TIME: " + diffTime);
-
-        // Generate random frequency of train
-        tFrequency = Math.floor((Math.random() * 51) + 5);
-        console.log(tFrequency);
 
         // Time apart (remainder)
         var tRemainder = diffTime % tFrequency;
