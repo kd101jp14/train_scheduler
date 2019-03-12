@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color: lightgray;
+    background-image: linear-gradient(to right, gray, lightgray, gray);
 }
 
 .form-group,
@@ -28,15 +28,15 @@ small,
     color: white;
 }
 
-.lead {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+.section1 {
+    margin-bottom: 30px;
 }
 
 .table,
 .btn {
     margin-bottom: 20px;
+}
+
+.form-group {
+    color:#495057;
 }
