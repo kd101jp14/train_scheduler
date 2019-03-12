@@ -69,3 +69,25 @@ $(document).ready(function () {
 
         $("input").val("");
     });
+
+    database.ref().on("child_added", function (childSnapshot) {
+        // Log changes
+        console.log(childSnapshot.val());
+
+        // Save changes as variables
+        var tName = childSnapshot.val().trainName;
+        var tDestination = childSnapshot.val().destination;
+        var tTime = childSnapshot.val().firstTrain;
+        var tFrequency = childSnapshot.val().frequency;
+        var nextTrain = childSnapshot.val().nextTrain;
+        var minutesAway = childSnapshot.val().minutesAway;
+
+        // Log new values individually
+        console.log(tName);
+        console.log(tDestination);
+        console.log(tTime);
+        console.log(tFrequency);
+        console.log(nextTrain);
+        console.log(minutesAway);
+    });
+});
