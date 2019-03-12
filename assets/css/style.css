@@ -37,10 +37,6 @@ small,
     margin-bottom: 20px;
 }
 
-.form-group {
-    color: #495057;
-}
-
 /* Media query so users do not have to scroll across table on small viewports */
 @media only screen and (max-width: 600px) {
     .table-responsive {
