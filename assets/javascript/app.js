@@ -4,9 +4,8 @@ $(document).ready(function () {
     var tDestination = $("#destInput").val().trim();
     var tTime = $("#timeInput").val().trim();
     var tFrequency = 10;
-
-    // var nextArrival = $("#").val().trim();
-    // var milesAway = $("#").val().trim();
+    var nextTrain = "";
+    var tMinutesTillTrain = 0;
     $("#submitButton").on("click", function (event) {
         event.preventDefault();
 
@@ -31,11 +30,11 @@ $(document).ready(function () {
         console.log(tRemainder);
 
         // Minute Until Train
-        var tMinutesTillTrain = tFrequency - tRemainder;
+        tMinutesTillTrain = tFrequency - tRemainder;
         console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
         // Next Train
-        var nextTrain = moment().add(tMinutesTillTrain, "minutes");
+        nextTrain = moment().add(tMinutesTillTrain, "minutes");
         console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 
         $("input").val("");
